@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SE | SHE RAISES</title>
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <!--Boostrap CDN link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!--Bootstrap Icon-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Teachers&display=swap" rel="stylesheet">
+  
+  <!--External CSS-->
+  <link rel="stylesheet" href="navfooter.css">
+  <link rel="stylesheet" href="s_e.css">
+  
+</head>
+<body>
+  <!--nav start-->
+  <nav class="navbar navbar-expand-lg sticky-top">
+      <!-- navbar brand as text -->
+       <a href="index.html" class="navbar-brand p-0 m-0">
+          <img src="images/logo__1_-removebg-preview.png" width="70px" height="70px" alt="">
+          <span class="navbar-text">SHE RAISES</span>
+      </a>
+      
+       
+       <!-- toggler button -->
+       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav_id" >
+          <i class="bi bi-justify"></i>
+      </button>
+     
+       <!-- nav items container -->
+        <div class="collapse navbar-collapse ms-auto" id="nav_id">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="awareness_hub.html" class="nav-link">Awareness Hub</a></li>
+              <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+              <li class="nav-item"><a href="s_e.html" class="nav-link">S.E</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav">
+              <li class="nav-item register"><a href="#register_modal" data-bs-toggle="modal" class="nav-link">Register</a></li>
+              <li class="nav-item login"><a href="#login_modal" data-bs-toggle="modal" class="nav-link">Login</a></li>
+          </ul>
+        </div>      
+  </nav>
+  
+  <div class="navcontent-box text-center w-100 pt-4 pb-3" style="background-color: rgba(248, 248, 255, 0.633);">
+    <h6 style="color: gray; ">Single Entertainment // Read</h6>
+  </div>
+
+  <!--Login Modal-->
+  <div class="modal " id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog  modal-dialog-centered modal-fullscreen-sm-down">
+          <div class="modal-content bg-light">
+              <div class="modal-header">
+                  <h3 class="modal-title">Login</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="loginForm">
+                   
+                      <input type="text" id="lusername" placeholder="Username" required />
+                      <input type="password" id="lpassword" placeholder="Password" required />
+                      <button type="submit">Login</button>
+                      &nbsp;<a href="#register_modal" data-dismiss="modal" data-bs-toggle="modal">Go to Register</a>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal " id="register_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog  modal-dialog-centered modal-fullscreen-sm-down">
+          <div class="modal-content bg-light">
+              <div class="modal-header">
+                  <h3 class="modal-title">Register</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="registerForm">
+                     
+                      <input type="text" id="name" placeholder="Name" required />
+                      <input type="text" id="rusername" placeholder="Username" required />
+                      <input type="password" id="rpassword" placeholder="Password" required />
+                      <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        required
+                      />
+                      <button type="submit">Register</button>
+                      &nbsp;<a href="#login_modal" data-dismiss="modal" data-bs-toggle="modal">Go to Login</a>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Virtual Library</h1>
+      <p>Explore a curated library with resources for empowerment and growth.</p>
+    </header>
+    <div class="ctg-btn">
+      <button id="magazineBtn" onclick="showSection('magazine')" class="active">Magazine</button>
+      <button id="movieBtn" onclick="showSection('movie')">Movie</button>
+      <button id="ebookBtn" onclick="showSection('ebook')">E-book</button>
+    </div>
+
+    <!-- Magazine-->
+    <section id="magazine" class="container section-container">
+      <h2>Magazines</h2>
+      <div class="row">
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="https://womenthrivemagazine.com/wp-content/uploads/2024/05/MAY-2024-Women-Thrive-Magazine.jpg" alt="">
+            <h5>Thrive </h5>
+            <p>Women Thrive is a global media platform where every woman has a voice. Where every woman’s story is celebrated.</p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="https://herstorymatters.com/wp-content/uploads/2024/03/C96738E0-3623-4757-A772-B8AEEEBD5811-792x1024.png" alt="">
+            <h5>HerStory</h5>
+            <p>Highlights historical and modern-day women who’ve made significant contributions to society.</p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="https://assets.isu.pub/document-structure/230516014300-d0091b0ea5c657af95a0cb48643aae12/v1/43a13debaed2effaadbf290aeb2ad557.jpeg" alt="">
+            <h5>Empowered Women</h5>
+            <p>Focuses on women in leadership, entrepreneurship, and breaking barriers.</p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="https://femina.wwmindia.com/content/2020/apr/femina21585920545.jpg" alt="">
+            <h5>Femina</h5>
+            <p>Femina magazine is a platform for women to get latest info and tips on fashion, beauty, health and relationship advice.</p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <a href="https://www.girlslife.com/">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Girls%27_Life_magazine_cover_March_2016.jpg" alt="">
+              <h5>Girls' Life</h5>
+            </a>
+            <p>Tips for boosting self-confidence, navigating friendships, and excelling in academics.</p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="https://diversitycomm.net/wp-content/uploads/2023/09/Brooke-Shields-scaled.jpg" alt="">
+            <h5>STEM Today(Girls in Tech edition)</h5>
+            <p>Highlights stories of women making waves in science, technology, engineering, and math.</p>
+          </div>
+        </div>
+
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="" alt="">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="" alt="">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+
+        <!--magazine -->
+        <div class="col-md-4">
+          <div class="mg-card">
+            <img src="" alt="">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Movie -->
+    <section id="movie" class="container movie-container">
+      <h3>Movie</h3>
+      <p>Explore our curated selection of inspiring films that celebrate resilience, intelligence, and the strength of women and young girls. Each movie tells a powerful story of overcoming obstacles, pursuing dreams, and challenging societal norms. These films are perfect for sparking motivation, broadening perspectives, and supporting personal growth on your journey.</p>
+      <div class="row">
+        <!-- Movie 1: Akeelah and the Bee -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://m.media-amazon.com/images/I/613Tiul4knL._AC_UF1000,1000_QL80_.jpg" alt="Akeelah and the Bee">
+            <h5>Akeelah and the Bee</h5>
+            <p>The story of a young girl from South Los Angeles who competes in the National Spelling Bee, highlighting perseverance and self-confidence.</p>
+          </div>
+        </div>
+
+        <!-- Movie 2: Hidden Figures -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/image_7b3ee600.jpeg" alt="Hidden Figures">
+            <h5>Hidden Figures</h5>
+            <p>The inspiring true story of three African-American women mathematicians at NASA who broke racial and gender barriers to advance space exploration.</p>
+          </div>
+        </div>
+
+        <!-- Movie 3: Whale Rider -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://lh5.googleusercontent.com/proxy/uQLUWXCsJL0gbUA4OJFNVfSM_-iY6nnptvedHJnPrSEiPNwI_GfG7uLgl6cbQAKvUfTaoo1vaIEn0J71JOasKUSaTJrxALjH" alt="Whale Rider">
+            <h5>Whale Rider</h5>
+            <p>A young Maori girl aspires to become a leader in her community, showcasing courage, tradition, and determination.</p>
+          </div>
+        </div>
+
+        <!-- Movie 4: Mona Lisa Smile -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/chameleon/title-movie/229988_MonaLisaSmile_2003_1400x2100_US_0.jpg?itok=_-NZFMYm" alt="Mona Lisa Smile">
+            <h5>Mona Lisa Smile</h5>
+            <p>A progressive professor encourages her students to challenge societal expectations and pursue independence in the 1950s.</p>
+          </div>
+        </div>
+
+        <!-- Movie 5: Wild -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://lh5.googleusercontent.com/proxy/rSmix2ozOZZlTmYBAVbguS-2ajuQledR-DcFzdosrc4b2fKVh15Z7dvioPvULuFlMIRSKPhF_ba69FlZEdP4xYh4bMSZZ_N92Dw" alt="Wild">
+            <h5>Wild</h5>
+            <p>A woman embarks on a solo journey along the Pacific Crest Trail, facing hardships that lead to self-discovery and resilience.</p>
+          </div>
+        </div>
+
+        <!-- Movie 6: Matilda -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Matilda</h5>
+            <p>A young girl with unique powers stands up against injustice, using her intelligence and bravery to empower herself and others.</p>
+          </div>
+        </div>
+
+        <!-- Movie: The color purple -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>The Color Purple</h5>
+            <p>A powerful story of a woman’s resilience and transformation as she overcomes abuse and oppression to find her voice and happiness.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>The Pursuit of Happiness</h5>
+            <p>A true story about perseverance, following a father’s journey to achieve a better life for himself and his son.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>The secret life of bees</h5>
+            <p>A young girl escapes an abusive home and finds solace and empowerment in the care of strong, independent women.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Queen of Katwe</h5>
+            <p>The inspiring true story of a Ugandan girl who becomes a chess prodigy and changes her life through determination and hard work.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Soul surfer</h5>
+            <p>A young surfer overcomes a shark attack and discovers courage and resilience in returning to the sport she loves.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Brave</h5>
+            <p>A fearless princess challenges tradition and embraces her independence to shape her own destiny.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Joy</h5>
+            <p>A determined woman rises from modest beginnings to invent a product and build a business empire.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Erin Brockovich</h5>
+            <p>A single mother takes on a major corporation in a fight for environmental justice and wins against all odds.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Bend it like beckham</h5>
+            <p>A young woman defies cultural expectations to pursue her dream of playing professional soccer.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>He named me malala</h5>
+            <p>A documentary about Malala Yousafzai, who advocates for girls’ education after surviving a Taliban attack.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Lady bird</h5>
+            <p>A coming-of-age story about a young woman navigating relationships, self-discovery, and independence.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>Anne of green gables</h5>
+            <p>An imaginative, strong-willed orphan faces adversity with optimism and resilience, inspiring others.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>The help</h5>
+            <p>Set in the civil rights era, the film tells the story of African-American maids sharing their stories and fighting for respect.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>He named me malala</h5>
+            <p>A documentary about Malala Yousafzai, who advocates for girls’ education after surviving a Taliban attack.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>He named me malala</h5>
+            <p>A documentary about Malala Yousafzai, who advocates for girls’ education after surviving a Taliban attack.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>He named me malala</h5>
+            <p>A documentary about Malala Yousafzai, who advocates for girls’ education after surviving a Taliban attack.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>He named me malala</h5>
+            <p>A documentary about Malala Yousafzai, who advocates for girls’ education after surviving a Taliban attack.</p>
+          </div>
+        </div>
+
+        <!-- Movie -->
+        <div class="col-md-4">
+          <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Matildaposter.jpg" alt="Matilda">
+            <h5>He named me malala</h5>
+            <p>A documentary about Malala Yousafzai, who advocates for girls’ education after surviving a Taliban attack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+
+    <!-- E-book Section -->
+    <section id="ebook" class="container section-container" style="display: none;">
+      <h2>E-books</h2>
+      <div class="row">
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="https://m.media-amazon.com/images/I/81RWELxX8jL._SL1500_.jpg" alt="">
+            <h5>Little Women</h5>
+            <p>A classic tale of sisterhood, resilience, and pursuing dreams despite challenges.</p>
+          </div>
+        </div>
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="https://cdn11.bigcommerce.com/s-9saznil5k4/images/stencil/1280x1280/products/8275/20404/10848__91355.1626895314.jpg?c=1" alt="">
+            <h5>I am enough</h5>
+            <p>A celebration of self-love and the importance of believing in oneself.</p>
+          </div>
+        </div>
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW_fNM7DLbdVxInSER89KWuchsRAxiQ6uZOw&s" alt="">
+            <h5>Emmeline pankhurst: My own story</h5>
+            <p>A firsthand account of the suffragette movement and its fight for women's voting rights.</p>
+          </div>
+        </div>
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Malala's magic pencil</h5>
+            <p>A beautifully illustrated tale of Malala’s childhood dreams and activism.
+            </p>
+          </div>
+        </div>
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Strong is the new pretty</h5>
+            <p>A photography book celebrating the strength and spirit of young girls.
+            </p>
+          </div>
+        </div>
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>The light in Hidden places</h5>
+            <p>A gripping historical fiction about courage during WWII.
+            </p>
+          </div>
+        </div>  
+        
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Reaching for the moon</h5>
+            <p>An inspiring autobiography by Katherine Johnson, a NASA mathematician.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>The strenght in our scars</h5>
+            <p>A guide to healing and finding inner strength through adversity.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Girls rising: changing the world one girl at a time</h5>
+            <p>True stories of girls around the globe fighting for education and equality.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Speak Up!</h5>
+            <p>Encourages young people, especially girls, to advocate for change.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Lead from the outside</h5>
+            <p>Advice on leadership and breaking barriers for young women.</p>
+          </div>
+        </div>
+        
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>My brilliant friend(Student editino)</h5>
+            <p>A powerful tale of friendship, ambition, and female empowerment.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Educated(Young readers edition)</h5>
+            <p>A memoir of a girl’s pursuit of education despite significant obstacles.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>A girl's guide to being awesome</h5>
+            <p>Practical advice for building self-worth and confidence.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Blod and brave</h5>
+            <p>Inspiring stories of women who fought for the right to vote.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>The year we learned to fly</h5>
+            <p>A motivational story about resilience and imagination.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="E-bookcard">
+            <img src="" alt="">
+            <h5>The gutsy girl</h5>
+            <p>A guide to embracing bravery and adventure, written for young girls.</p>
+          </div>
+        </div>  
+
+        <!-- ebook -->
+        <div class="col-md-4">
+          <div class="eb-card">
+            <img src="" alt="">
+            <h5>Rise: The complete series</h5>
+            <p>A true story about rebuilding a life with determination and resilience.</p>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+    <!--Footer start-->
+    <footer>
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+              <div class="col-md-3">
+                  <a href="index.html">
+                      <img src="images/logo__1_-removebg-preview.png" alt="Logo" width="70px" height="70px">
+                  </a>
+                  <h4 class="mt-3"><b>Women Empowerment</b></h4>
+                  <p>Email: sheraises@all.gmail.com</p>
+                  <p>Tel: +95 962 342 751</p>
+                  <div class="mt-3" id="iconbox">
+                      <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                      <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                      <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                      <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                  </div>
+              </div>
+              <!-- Support Links -->
+              <div class="col-md-2">
+                  <h5>Support</h5>
+                  <ul class="list-unstyled footerlink">
+                      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                      <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                      <li class="nav-item"><a href="awareness_hub.html" class="nav-link">Latest Blog</a></li>
+                      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                  </ul>
+              </div>
+              <!-- Quick Links -->
+              <div class="col-md-2">
+                  <h5>Quick Links</h5>
+                  <ul class="list-unstyled footerlink">
+                      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                      <li class="nav-item"><a href="awareness_hub.html" class="nav-link">Awareness Hub</a></li>
+                      <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                      <li class="nav-item"><a href="s_e.html" class="nav-link">S.E</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Resource</a></li>
+                  </ul>
+              </div>
+              <!-- Policies -->
+              <div class="col-md-3">
+                  <h5>Policies</h5>
+                  <ul class="list-unstyled footerlink">
+                      <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Women Empowerment Policy</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Social Support</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">Community Support</a></li>
+                  </ul>
+              </div>
+              <!-- Action -->
+              <div class="col-md-2">
+                  <h5>Action</h5>
+                  <ul class="list-unstyled footerlink">
+                      <button type="button" class="nav-item btn mt-2"><a href="#" class="nav-link">Share Your Story</a></button>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <div class="copyright w-100">
+        <hr>
+        <p class="text-center">©Copyright 2024 | All Rights Reserved by SHE RAISES. Women Empowerment</p>
+    </div>
+
+  <script>
+    //  localStorage.clear();
+  </script>
+  <script src="script_login.js"></script>
+  <script src="script_register.js"></script>
+
+    <!-- JavaScript to Toggle Sections -->
+    <script>
+      function showSection(section) {
+        document.getElementById("magazine").style.display = "none";
+        document.getElementById("movie").style.display = "none";
+        document.getElementById("ebook").style.display = "none";
+
+        document.getElementById(section).style.display = "block";
+
+        document.getElementById("magazineBtn").classList.remove("active");
+        document.getElementById("movieBtn").classList.remove("active");
+        document.getElementById("ebookBtn").classList.remove("active");
+
+        document.getElementById(section + "Btn").classList.add("active");
+      }
+    </script>
+</body>
+</html>

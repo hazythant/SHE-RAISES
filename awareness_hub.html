@@ -1,0 +1,272 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Awareness Hub | SHE RAISES</title>  
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!--Boostrap CDN link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Teachers&display=swap" rel="stylesheet">
+    
+    <!--External CSS-->
+    <link rel="stylesheet" href="navfooter.css">
+    <link rel="stylesheet" href="awareness_hub.css">
+    
+</head>
+<body>
+    <!--nav start-->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <!-- navbar brand as text -->
+         <a href="index.html" class="navbar-brand p-0 m-0">
+            <img src="images/logo__1_-removebg-preview.png" width="70px" height="70px" alt="">
+            <span class="navbar-text">SHE RAISES</span>
+        </a>
+        
+         
+         <!-- toggler button -->
+         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav_id" >
+            <i class="bi bi-justify"></i>
+        </button>
+       
+         <!-- nav items container -->
+          <div class="collapse navbar-collapse ms-auto" id="nav_id">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="awareness_hub.html" class="nav-link">Awareness Hub</a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                <li class="nav-item"><a href="s_e.html" class="nav-link">S.E</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item register"><a href="#register_modal" data-bs-toggle="modal" class="nav-link">Register</a></li>
+                <li class="nav-item login"><a href="#login_modal" data-bs-toggle="modal" class="nav-link">Login</a></li>
+            </ul>
+          </div>      
+    </nav>
+
+    <!--Login Modal-->
+    <div class="modal " id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog  modal-dialog-centered modal-fullscreen-sm-down">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                     
+                        <input type="text" id="lusername" placeholder="Username" required />
+                        <input type="password" id="lpassword" placeholder="Password" required />
+                        <button type="submit">Login</button>
+                        &nbsp;<a href="#register_modal" data-dismiss="modal" data-bs-toggle="modal">Go to Register</a>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Register Modal -->
+    <div class="modal " id="register_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog  modal-dialog-centered modal-fullscreen-sm-down">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h3 class="modal-title">Register</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                       
+                        <input type="text" id="name" placeholder="Name" required />
+                        <input type="text" id="rusername" placeholder="Username" required />
+                        <input type="password" id="rpassword" placeholder="Password" required />
+                        <input
+                          type="password"
+                          id="confirmPassword"
+                          placeholder="Confirm Password"
+                          required
+                        />
+                        <button type="submit">Register</button>
+                        &nbsp;<a href="#login_modal" data-dismiss="modal" data-bs-toggle="modal">Go to Login</a>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Header section-->
+    <section class="header-section w-100">
+        <div class="navcontent-box text-center w-100 pt-4 pb-3" style="background-color: rgba(248, 248, 255, 0.633);">
+            <h6 style="color: ghostwhite; ">Awareness Hub // Articles & Blogs</h6>
+        </div>
+        <div class="header-container text-center">
+            <h1>Awareness Hub</h1>
+            <p>Empowering voices, inspiring change. Together, we build a brighter future by fostering connection, support, and growth.</p>
+            <div class="button-group">
+                <button>Learn More</button>
+                <button>Join Us</button>
+            </div>
+        </div>
+    </section> 
+
+    <!--Article section-->
+    <section class="article-section w-100">
+        <div class="article-container"> 
+            <div class="row mb-5 ps-3">
+                <h4 style="font-family: 'Poppins', serif; color: #7f1330;">Articles to Read for Ladies!</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum incidunt facilis optio aliquam quo quia sed! Adipisci quas ex nemo? Sint cum dolorum debitis qui porro perspiciatis id blanditiis veniam?</p>
+            </div>  
+            <div class="row w-100 justify-content-center mb-5">  
+                <div class="col-md-4">  
+                    <div class="article-card bg-red mb-2">  
+                        <i class="fas fa-microphone card-icon"></i>  
+                        <h5>!!Use your voice!!</h5>  
+                        <p id="intro-text">  
+                            Women are the architects of their own destinies, capable of transforming dreams into reality through passion and perseverance. Each challenge we face is an opportunity to grow stronger and more resilient. By embracing our unique strengths and supporting one another, we cultivate a community where every woman can flourish  
+                        </p>  
+                    </div>  
+                    <br>  
+                    <div class="article-card bg-red mb-3">  
+                        <i class="fas fa-heart card-icon"></i>  
+                        <h5>!!Our Power!!</h5>  
+                        <p id="intro-text">  
+                            In a world where challenges often seek to undermine our potential, women have the extraordinary ability to rise above and redefine their narratives. Each of us carries a unique story filled with triumphs and trials that shape who we are.  
+                        </p>  
+                    </div>  
+                </div>  
+    
+                <div class="col-md-4">  
+                    <div class="article-card bg-pink mb-2">  
+                        <i class="fas fa-lightbulb card-icon"></i>  
+                        <h5 class="text-center">!!The difference!!</h5>  
+                        <p>Our voice are felt in such good difference so just feel it.  
+                            Empowerment begins when a woman realizes her words hold weight so Let your voice be the light that leads others out of the shadows and Be the light of the world.  
+                            Us women are not just trying hard to be strong we are already but in fact if we all speak, use our voice more when we speak together we can create a bold definition of "Strong".  
+                        </p>  
+                    </div>  
+                    <br>  
+                    <div class="article-card bg-pink mb-3">  
+                        <i class="fas fa-users card-icon"></i>  
+                        <h5 class="text-center">!!The affect of us!!</h5>  
+                        <p>Every woman has the power to be a catalyst for change, igniting inspiration and hope in those around her. By sharing our experiences and wisdom, we can create a tapestry of strength that weaves through our communities. Let’s challenge stereotypes, break down barriers, and advocate for equality with unwavering determination. When we lift each other up, we not only elevate ourselves but also pave the way for future generations to dream bigger and achieve more.  
+                        </p>  
+                    </div>  
+                </div>  
+    
+                <div class="col-md-4">  
+                    <div class="article-card bg-red mb-2">  
+                        <i class="fas fa-microphone card-icon"></i>
+                        <h5 class="text-center">!!Use your voice!!</h5>  
+                        <p id="intro-text">  
+                            A woman’s voice is a powerful tool for change, resilience, and unity. Yet, societal norms have often tried to silence or diminish it. Today, more than ever, it’s crucial to embrace and amplify this voice.  
+                            What you are saying is not just for yourself it's for every single individual woman to encourage themselves for it.  
+                        </p>  
+                    </div>  
+                    <br>  
+                    <div class="article-card bg-red mb-3">  
+                        <i class="fas fa-fire card-icon"></i>  
+                        <h5 class="text-center">!!The force!!</h5>  
+                        <p id="intro-text">  
+                            Women are a force of nature, embodying strength, resilience, and creativity in every aspect of life. By supporting one another and embracing our unique stories, we create a powerful community that fosters growth and empowerment  
+                        </p>  
+                    </div>  
+                </div>  
+            </div>
+            <div class="row mt-3 text-center">
+                <hr> <br>
+                <h3 style="font-family: 'Poppins', serif;">
+                    <span><i class="bi bi-megaphone"></i></span>
+                    Latest Upload Once A Month
+                </h3>
+            </div>  
+        </div> 
+    </section>
+    
+    <!--Footer start-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <a href="index.html">
+                        <img src="images/logo__1_-removebg-preview.png" alt="Logo" width="70px" height="70px">
+                    </a>
+                    <h4 class="mt-3"><b>Women Empowerment</b></h4>
+                    <p>Email: sheraises@all.gmail.com</p>
+                    <p>Tel: +95 962 342 751</p>
+                    <div class="mt-3" id="iconbox">
+                        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Support Links -->
+                <div class="col-md-2">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled footerlink">
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                        <li class="nav-item"><a href="awareness_hub.html" class="nav-link">Latest Blog</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled footerlink">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="awareness_hub.html" class="nav-link">Awareness Hub</a></li>
+                        <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                        <li class="nav-item"><a href="s_e.html" class="nav-link">S.E</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Resource</a></li>
+                    </ul>
+                </div>
+                <!-- Policies -->
+                <div class="col-md-3">
+                    <h5>Policies</h5>
+                    <ul class="list-unstyled footerlink">
+                        <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Women Empowerment Policy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Social Support</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Community Support</a></li>
+                    </ul>
+                </div>
+                <!-- Action -->
+                <div class="col-md-2">
+                    <h5>Action</h5>
+                    <ul class="list-unstyled footerlink">
+                        <button type="button" class="nav-item btn mt-2"><a href="#" class="nav-link">Share Your Story</a></button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright w-100 mt-3">
+        <p class="text-center">©Copyright 2024 | All Rights Reserved by SHE RAISES. Women Empowerment</p>
+    </div>
+
+    <script>
+      //  localStorage.clear();
+    </script>
+    <script src="script_login.js"></script>
+    <script src="script_register.js"></script>
+</body>  
+</html>
